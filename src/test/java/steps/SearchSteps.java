@@ -24,7 +24,7 @@ public class SearchSteps extends BaseTest {
 
     @Before
     public void setup() throws Exception {
-        init(browser, wait);
+        init(browser,wait);
     }
 
     @After

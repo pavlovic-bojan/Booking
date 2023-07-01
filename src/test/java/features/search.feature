@@ -2,7 +2,7 @@ Feature: Search
   As a user I should be able to search for hotel or apartment
 
   Scenario Outline: Search in desired destination for hotel or apartment
-  As a user I shouldn't be able to search for hotel or apartment
+    As a user I shouldn't be able to search for hotel or apartment
 
     Given I am on the booking home page
     When I enter my desired destination "<destination>"
