@@ -17,7 +17,7 @@ public class SearchSteps extends BaseTest {
     String quit = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("quit");
     String env = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("env");
 
-    //SearchHomePage searchHomePage = new SearchHomePage(driver);
+    SearchHomePage searchHomePage = new SearchHomePage(driver);
 
     @Before
     public void setup() throws Exception {
@@ -38,33 +38,33 @@ public class SearchSteps extends BaseTest {
 
     @When("I enter my desired destination {string}")
     public void i_enter_my_desired_destination(String destination) throws Exception {
-        new SearchHomePage(driver).enterDestination(destination);
+        searchHomePage.enterDestination(destination);
     }
 
     @And("Choose the duration of the stay")
     public void choose_the_duration_of_the_stay() throws Exception {
-        new SearchHomePage(driver).clickSearchDate();
-        new SearchHomePage(driver).clickStartDate();
-        new SearchHomePage(driver).clickFinishDate();
-        new SearchHomePage(driver).clickSearchDate();
+        searchHomePage.clickSearchDate();
+        searchHomePage.clickStartDate();
+        searchHomePage.clickFinishDate();
+        searchHomePage.clickSearchDate();
     }
 
     @And("Choose number of guests and rooms")
     public void choose_number_of_guests_and_rooms() throws Exception {
-        new SearchHomePage(driver).clickNumberGuestsRooms();
-        new SearchHomePage(driver).clickIncreaseGuests();
-        new SearchHomePage(driver).clickIncreaseRoom();
-        new SearchHomePage(driver).clickButtonOk();
+        searchHomePage.clickNumberGuestsRooms();
+        searchHomePage.clickIncreaseGuests();
+        searchHomePage.clickIncreaseRoom();
+        searchHomePage.clickButtonOk();
     }
 
     @And("Click Search")
     public void click_search(String arg0) throws Exception {
-        new SearchHomePage(driver).clickButtonSearch();
+        searchHomePage.clickButtonSearch();
     }
 
     @Then("Verify that the search results are displayed")
     public void verify_that_the_search_results_are_displayed() {
-        new SearchHomePage(driver).searchResultsShouldBeVisible();
+        searchHomePage.searchResultsShouldBeVisible();
     }
 
 }
