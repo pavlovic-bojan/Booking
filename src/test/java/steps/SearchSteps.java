@@ -58,7 +58,7 @@ public class SearchSteps extends BaseTest {
     }
 
     @And("Click Search")
-    public void click_search(String arg0) throws Exception {
+    public void click_search() throws Exception {
         searchHomePage.clickButtonSearch();
     }
 
