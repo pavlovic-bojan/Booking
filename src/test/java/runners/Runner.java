@@ -9,13 +9,12 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "steps",
-        tags = "(@Smoke or @Regression)",
         plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"}
 )
 public class Runner extends AbstractTestNGCucumberTests {
     @DataProvider(parallel = true)
     @Override
-    public Object[][] scenarios(){
+    public Object[][] scenarios() {
         return super.scenarios();
     }
 }

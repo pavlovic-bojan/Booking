@@ -1,7 +1,6 @@
 Feature: Search
   As a user I should be able to search for hotel or apartment
 
-  @Smoke
   Scenario Outline: Search in desired destination for hotel or apartment
   As a user I shouldn't be able to search for hotel or apartment
 
