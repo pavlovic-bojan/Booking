@@ -10,17 +10,14 @@ import org.testng.Reporter;
 import pages.SearchHomePage;
 import tests.BaseTest;
 
-import java.util.Map;
-
 public class SearchSteps extends BaseTest {
 
     String browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser");
     String wait = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("wait");
     String quit = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("quit");
     String env = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("env");
-    Map<String, String> data;
 
-    SearchHomePage searchHomePage = new SearchHomePage(driver);
+    //SearchHomePage searchHomePage = new SearchHomePage(driver);
 
     @Before
     public void setup() throws Exception {
@@ -35,39 +32,39 @@ public class SearchSteps extends BaseTest {
     }
 
     @Given("I am on the booking home page")
-    public void iAm_on_the_booking_home_page() throws Exception {
+    public void i_am_on_the_booking_home_page() throws Exception {
         openApp(env);
     }
 
     @When("I enter my desired destination {string}")
     public void i_enter_my_desired_destination(String destination) throws Exception {
-        searchHomePage.enterDestination(destination);
+        new SearchHomePage(driver).enterDestination(destination);
     }
 
     @And("Choose the duration of the stay")
     public void choose_the_duration_of_the_stay() throws Exception {
-        searchHomePage.clickSearchDate();
-        searchHomePage.clickStartDate();
-        searchHomePage.clickFinishDate();
-        searchHomePage.clickSearchDate();
+        new SearchHomePage(driver).clickSearchDate();
+        new SearchHomePage(driver).clickStartDate();
+        new SearchHomePage(driver).clickFinishDate();
+        new SearchHomePage(driver).clickSearchDate();
     }
 
     @And("Choose number of guests and rooms")
     public void choose_number_of_guests_and_rooms() throws Exception {
-        searchHomePage.clickNumberGuestsRooms();
-        searchHomePage.clickIncreaseGuests();
-        searchHomePage.clickIncreaseRoom();
-        searchHomePage.clickButtonOk();
+        new SearchHomePage(driver).clickNumberGuestsRooms();
+        new SearchHomePage(driver).clickIncreaseGuests();
+        new SearchHomePage(driver).clickIncreaseRoom();
+        new SearchHomePage(driver).clickButtonOk();
     }
 
     @And("Click Search")
     public void click_search(String arg0) throws Exception {
-        searchHomePage.clickButtonSearch();
+        new SearchHomePage(driver).clickButtonSearch();
     }
 
     @Then("Verify that the search results are displayed")
     public void verify_that_the_search_results_are_displayed() {
-        searchHomePage.searchResultsShouldBeVisible();
+        new SearchHomePage(driver).searchResultsShouldBeVisible();
     }
 
 }
