@@ -34,6 +34,7 @@ public class SearchSteps extends BaseTest {
     @Given("I am on the booking home page")
     public void i_am_on_the_booking_home_page() throws Exception {
         openApp(env);
+        searchHomePage.clickXOnPopUp();
     }
 
     @When("I enter my desired destination {string}")
