@@ -21,6 +21,6 @@ Feel free to copy the project from this repository into your IDE and run the tes
 
 ## Collaboration
 ***
-This is my personal project which I upgrade with new things an scenarios from time to time and I do not accept any collaboration
+This is my personal project which I upgrade with new things and test scenarios from time to time and I do not accept any collaboration
 > Please do not change the code. 
 > I am available for any questions.
