@@ -26,7 +26,7 @@ public class SearchHomePage extends BasePage {
     WebElement numberGuestsRooms;
     @FindBy(xpath = "//button[@class='fc63351294 a822bdf511 e3c025e003 fa565176a8 f7db01295e c334e6f658 e1b7cfea84 d64a4ea64d']")
     WebElement increaseGuests;
-    @FindBy(xpath = "//button[@class='fc63351274 a822bdf511 e3c025e003 fa565176a8 f7db01295e c334e6f658 e1b7cfea84 d64a4ea64d']")
+    @FindBy(xpath = "(//button[@class='fc63351294 a822bdf511 e3c025e003 fa565176a8 f7db01295e c334e6f658 e1b7cfea84 d64a4ea64d'])[3]")
     WebElement increaseRoom;
     @FindBy(xpath = "//button[@class='fc63351294 a822bdf511 e2b4ffd73d f7db01295e c938084447 a9a04704ee d285d0ebe9']")
     WebElement buttonOk;
