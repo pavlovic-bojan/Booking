@@ -1,4 +1,4 @@
-# Booking
+# Booking Automation Java Selenium Cucumber TestNG Allure
 This repository is the result of my independent project to train certain things in QA Automation.
 
 I spent 7 days on the realization of setup this project
